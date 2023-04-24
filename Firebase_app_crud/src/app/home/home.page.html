@@ -1,0 +1,71 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Registro
+    </ion-title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Registro</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+<section class="menu" id="menu">
+  <h3 class="sub-titulo">Nuestro Menu</h3>
+  <h1 class="titulo">Nuestras especialidades</h1>
+
+  <div class="box-container">
+       <div class="box">
+            <div class="image" placeholder="img" [(ngModel)]="newPersona.img">
+                 <img src="/assets/img/asado.jpg" alt="" >
+                  <a href="#" class="fas fa-heart"></a>
+            </div>
+                  <div class="content">
+                      <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                      </div>
+                       <h3> Comida Deliciosa</h3>
+                       <p>Pollo Asado</p>
+                       <a  class="btn" (click)="save()" > Agregar </a>
+                       <span class="price">$12.99</span>
+                       <ion-list class="list-formulario">
+                        <ion-item>
+                          <ion-input type="text" placeholder="Cedula" [(ngModel)]="newPersona.cedula"></ion-input>
+                        </ion-item>
+                        <ion-item>
+                          <ion-input type="text" placeholder="Nombre" [(ngModel)]="newPersona.nombre"></ion-input>
+                        </ion-item>
+                        <ion-item>
+                          <ion-input type="text" placeholder="Apellido" [(ngModel)]="newPersona.apellido"></ion-input>
+                        </ion-item>
+                        </ion-list>
+                  </div>
+            </div>
+      </div>
+<br>
+<br>
+      <ion-list>
+        <ion-item *ngFor="let p of Personas" >
+          <ion-label>{{p.cedula}}</ion-label>
+          <ion-label>{{p.nombre}}</ion-label>
+          <ion-label>{{p.apellido}}</ion-label>
+          <ion-label>{{p.img}}</ion-label>
+          
+          <ion-button (click)="delete(p)" color="danger" >
+            <ion-icon slot="icon-only" name="close-circle-outline" ></ion-icon>
+          </ion-button>
+        </ion-item>
+      </ion-list>
+</section>
+</ion-content>
+
+
