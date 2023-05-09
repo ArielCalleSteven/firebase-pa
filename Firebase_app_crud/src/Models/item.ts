@@ -1,5 +1,5 @@
 export interface Item{
-  img:string;
+  imagen:string;
   cedula:string;
   nombre:string;
   apellido:string;

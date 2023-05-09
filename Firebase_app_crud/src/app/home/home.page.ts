@@ -22,7 +22,7 @@ export class HomePage {
     nombre: '',
     apellido: '',
     id: '',
-    img: ''
+    imagen: ''
   };
   constructor(private bd:BdService, private toast:ToastService, private load:LoadingService) {
   }
@@ -60,7 +60,7 @@ export class HomePage {
     this.newPersona.cedula="";
     this.newPersona.nombre="";
     this.newPersona.apellido="";
-    this.newPersona.img="";
+    this.newPersona.imagen="";
     }
   }
 

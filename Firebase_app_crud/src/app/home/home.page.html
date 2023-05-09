@@ -47,6 +47,17 @@
                         <ion-item>
                           <ion-input type="text" placeholder="Apellido" [(ngModel)]="newPersona.apellido"></ion-input>
                         </ion-item>
+                        <ion-item >
+                          <ion-label>Imagen:</ion-label>
+                          <ion-button color="dark" style="height: 40px; width: 40px;">
+                            <label for="file-uploap">
+                              <ion-icon slot="icon-only" name="images" style="height: 80px; width: 30px; color: white;"></ion-icon>
+                            </label>
+                            <input (change)="newImage($event)" id="file-uploap" style="display: none ;" type="file" accept="images/jpeg" [(ngModel)]="newPersona.imagen">
+                          </ion-button>
+                          <ion-input type="text"  [(ngModel)]="newPersona.imagen" label="Ingrese la URL" label-placement="floating" 
+                            fill="solid" type="text" placeholder="Enter Text" ></ion-input>
+                        </ion-item>
                         </ion-list>
                   </div>
             </div>
